@@ -44,6 +44,92 @@
   <div class="wrap legal">
     <h1>Contact</h1>
     <p>Found an error, have a tool suggestion, or want to talk partnerships? We'd like to hear from you.</p>
+    <p><strong>Email:</strong> <a id="contact-email" href="mailto:hello@zeratech.io">hello@zeratech.io</a></p>
+    <p><strong>WhatsApp:</strong> <a id="contact-whatsapp" href="https://wa.me/919835102324" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <nav><a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy Policy</a></nav>
+    <p>&copy; 2026 Aivantis, a property of <a href="https://zeratech.io/" target="_blank" rel="noopener noreferrer">Zera Technologies</a>. All rights reserved.</p>
+    <p class="credit">Designed and developed by <a href="https://zeratech.io/" target="_blank" rel="noopener noreferrer">Zera Technologies</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var SITE_LABEL = 'Aivantis (aivantisglobal.com)';
+  var referrer = document.referrer || 'Direct visit / typed URL';
+
+  var emailLink = document.getElementById('contact-email');
+  if (emailLink) {
+    var subject = encodeURIComponent('Message from ' + SITE_LABEL);
+    var body = encodeURIComponent(
+      'Site: ' + SITE_LABEL + '\n' +
+      'Came from page: ' + referrer + '\n\n'
+    );
+    emailLink.href = 'mailto:hello@zeratech.io?subject=' + subject + '&body=' + body;
+  }
+
+  var waLink = document.getElementById('contact-whatsapp');
+  if (waLink) {
+    var waText = encodeURIComponent(
+      "Hi, I'm contacting you from " + SITE_LABEL + '. I came from: ' + referrer
+    );
+    waLink.href = 'https://wa.me/919835102324?text=' + waText;
+  }
+})();
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9JFKMV5P0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y9JFKMV5P0');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Aivantis</title>
+<meta name="description" content="Get in touch with the Aivantis team — corrections, tool suggestions, or partnership inquiries.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.aivantisglobal.com/contact.html">
+<meta property="og:title" content="Contact Aivantis">
+<meta property="og:description" content="Get in touch with the Aivantis team — corrections, tool suggestions, or partnership inquiries.">
+<meta property="og:image" content="https://www.aivantisglobal.com/og-image.png">
+<meta property="og:image:secure_url" content="https://www.aivantisglobal.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Aivantis">
+<meta name="twitter:description" content="Get in touch with the Aivantis team — corrections, tool suggestions, or partnership inquiries.">
+<meta name="twitter:image" content="https://www.aivantisglobal.com/og-image.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo">Aivant<span>is</span></a>
+    <nav class="site">
+      <a href="index.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap legal">
+    <h1>Contact</h1>
+    <p>Found an error, have a tool suggestion, or want to talk partnerships? We'd like to hear from you.</p>
     <p><strong>Email:</strong> <a href="mailto:hello@aivantisglobal.com">hello@aivantisglobal.com</a></p>
     <p style="color:#6b7280; font-size:14px;">(Set up this inbox as an alias or forwarding address once the domain is connected.)</p>
   </div>
