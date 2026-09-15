@@ -45,6 +45,14 @@
     <h1>AI tool reviews you can actually trust</h1>
     <p class="lead">Side-by-side comparisons, pricing breakdowns, and honest alternatives — so you can pick the right AI tool without reading ten browser tabs.</p>
 
+    <div class="filter-bar" role="group" aria-label="Filter articles by category">
+      <button type="button" class="filter-btn active" data-filter="all">All (16)</button>
+      <button type="button" class="filter-btn" data-filter="comparison">Comparison</button>
+      <button type="button" class="filter-btn" data-filter="alternatives">Alternatives</button>
+      <button type="button" class="filter-btn" data-filter="pricing">Pricing</button>
+      <button type="button" class="filter-btn" data-filter="use case">Use Case</button>
+    </div>
+
     <div class="article-grid">
       <a class="article-card" href="articles/chatgpt-vs-claude-vs-gemini.html">
         <span class="tag">Comparison</span>
@@ -127,6 +135,7 @@
         <p>Run a one-person business like you have a small team behind you — including an AI planner stack and content-creation tools.</p>
       </a>
     </div>
+    <p id="empty-state" style="display:none; color: var(--muted); margin-top: 24px;">No articles in this category yet.</p>
   </div>
 </main>
 
@@ -137,6 +146,33 @@
     <p class="credit">Designed and developed by <a href="https://zeratech.io/" target="_blank" rel="noopener noreferrer">Zera Technologies</a></p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.article-card');
+  var emptyState = document.getElementById('empty-state');
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      var visibleCount = 0;
+
+      cards.forEach(function (card) {
+        var tagEl = card.querySelector('.tag');
+        var tag = tagEl ? tagEl.textContent.trim().toLowerCase() : '';
+        var show = filter === 'all' || tag === filter;
+        card.classList.toggle('is-hidden', !show);
+        if (show) visibleCount++;
+      });
+
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
